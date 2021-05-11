@@ -105,7 +105,15 @@ https://atuin.ru/blog/media-plejer-plyr-dlya-html5-youtube-i-vimeo/
 
 https://www.dropzonejs.com/
 
-For the backend, you can use the same Amazon S3,what's in the pom file
+For the backend, you can use the same Amazon S3, what's in the pom file.
+
+Do not forget to include in the project postgresql-42.2.1.jar.
+
+The program works perfectly without bugs. 
+
+Good luck everyone. 
+
+Together we make our world the best!
 
 
 
