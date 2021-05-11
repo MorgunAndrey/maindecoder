@@ -1,4 +1,5 @@
 # Maindecoder
+
 Hi! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
 
 I wrote this program, especially for Google, as it had crashes and did not work for more than an hour due to an overflowing data store. 
@@ -94,7 +95,7 @@ sudo yum install java-1.8.0-openjdk-devel
 
 sudo yum install java-1.8.0-openjdk
 
-2. The decoder works in single-threaded mode, but can be used in multi-threaded mode on JAVA SPRING
+2. The decoder works in single-threaded mode, but can be used in multi-threaded mode on JAVA SPRING,or C#, PHP, Python.
 
 for this you need to add the frontend and backend. if you want to quickly write a service like YOUTUBE.
 
