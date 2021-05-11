@@ -13,7 +13,7 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 
 public class FFmpegDecoder extends Thread {
 	
-	private String accessKey = ConstantsUtils.ACCESS_KEY;
+    private String accessKey = ConstantsUtils.ACCESS_KEY;
     private String secretKey = ConstantsUtils.SECRET_KEY;
     private String region = ConstantsUtils.REGION;
 	
