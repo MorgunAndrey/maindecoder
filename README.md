@@ -2,7 +2,9 @@
 
 Hi! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
 
-I wrote this program, especially for Google, as it had crashes and did not work for more than an hour due to an overflowing data store. 
+I wrote this program specifically for Google as there were crashes and didn’t work for more than an hour due to data storage overflow.
+
+Very sad. 
 
 With this example, I want to show Google developers and get an idea of organizing decoding of large video files and working with cloud storage.
 
