@@ -1,11 +1,15 @@
 # maindecoder
-Hi! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179 I wrote this program, especially for Google, as it had crashes and did not work for more than an hour due to an overflowing data store. With this example, I want to show Google developers and get an idea of organizing decoding of large video files and working with cloud storage.
+Hi! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
+
+I wrote this program, especially for Google, as it had crashes and did not work for more than an hour due to an overflowing data store. 
+
+With this example, I want to show Google developers and get an idea of organizing decoding of large video files and working with cloud storage.
 
 In detail, what would the program work I will describe tomorrow May 11, 2021
 
 1. On the server Centos 7 you need to install:
-2. 
-//INSTALL AND CASTOM POSTGRESQL
+ 
+//  INSTALL AND CASTOM POSTGRESQL
 
 sudo rpm -Uvh  http://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7.6-x86_64/pgdg-centos10-10-2.noarch.rpm
 
@@ -67,21 +71,52 @@ ALTER TABLE public.medias
     
     
     
-//INSTALL AND CASTOM CRON
+//  INSTALL AND CASTOM CRON
 
 crontab -e
 
 write a line to run jar file every 10 minutes and create a log file
 
-*/1 * * * * flock -n /usr/share/nginx/html/maindecoder/uploads/lockfile /usr/bin/java -jar /usr/share/nginx/html/MainDecoder/target/decoder.jar > /home/logcron/cron.log 2>&1
+*/1 * * * * flock -n /usr/www/html/maindecoder/uploads/lockfile /usr/bin/java -jar /usr/share/nginx/html/MainDecoder/target/decoder.jar > /home/logcron/cron.log 2>&1
 
 
 
-//INSTALL FFMPEG
+//  INSTALL FFMPEG
 
 sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
 sudo yum install ffmpeg ffmpeg-devel
+
+
+//  INSTALL JDK 8 AND JRE 8
+
+sudo yum install java-1.8.0-openjdk-devel
+
+sudo yum install java-1.8.0-openjdk
+
+2. The decoder works in single-threaded mode, but can be used in multi-threaded mode on JAVA SPRING
+
+for this you need to add the frontend and backend. if you want to quickly write a service like YOUTUBE.
+
+Frontend are very good for this plyr and dropzonejs
+
+https://atuin.ru/blog/media-plejer-plyr-dlya-html5-youtube-i-vimeo/
+
+https://www.dropzonejs.com/
+
+For the backend, you can use the same Amazon S3,what's in the pom file
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
