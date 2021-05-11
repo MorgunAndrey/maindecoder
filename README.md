@@ -8,7 +8,7 @@ Very sad.
 
 With this example, I want to show Google developers and get an idea of organizing decoding of large video files and working with cloud storage.
 
-In detail, what would the program work I will describe tomorrow May 11, 2021
+Here's what you need to run the program.
 
 1. On the server Centos 7 you need to install:
  
