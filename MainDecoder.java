@@ -136,8 +136,8 @@ public class MainDecoder {
   		
 		if(split>4) {
 			cmdffmpeg.add("scale=iw/4:ih/4");	
-		}else {
-  		    cmdffmpeg.add("scale=iw/2:ih/2");
+		} else {
+  		        cmdffmpeg.add("scale=iw/2:ih/2");
   		}
 		
   		cmdffmpeg.add("-y");
@@ -148,9 +148,9 @@ public class MainDecoder {
   		
         execFFMPEG(cmdffmpeg,(Integer) updateId,pathToFileCloud,pathToUploud);
   		
-        } catch (Exception e) {
+          } catch (Exception e) {
             e.printStackTrace();
-        }
+          }
   	}
   	
   	private void execFFMPEG(ArrayList<String> command,int updateId,String pathToFileCloud,String pathToUploud) {
