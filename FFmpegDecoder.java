@@ -146,7 +146,7 @@ public class FFmpegDecoder extends Thread {
 	         } catch (Exception e) {
 	            e.printStackTrace();
 	         }
-		    
+	//Here you can add code to remove high-resolution videos downloaded from smartphones, for example, to save space on the cloud.	    
 		         
 			 MainDecoder launchYet = new MainDecoder();
 			 launchYet.mainActions();
