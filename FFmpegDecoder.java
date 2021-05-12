@@ -13,9 +13,11 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 
 public class FFmpegDecoder extends Thread {
 	
+//private AmazonS3 s3Client;
     private String accessKey = ConstantsUtils.ACCESS_KEY;
     private String secretKey = ConstantsUtils.SECRET_KEY;
     private String region = ConstantsUtils.REGION;
+    private String cloud = ConstantsUtils.CLOUD;
 	
 	Process process;
 	Scanner scanner;
@@ -26,18 +28,20 @@ public class FFmpegDecoder extends Thread {
 	Integer updateId;
 	String pathToFileCloud;
 	String pathToUploud;
+	Integer state_id;
 	
-	public FFmpegDecoder(MainDecoder mainWindow, String[] cmdffmpeg,Integer updateId,String pathToFileCloud,String pathToUploud) {
+	public FFmpegDecoder(MainDecoder mainWindow, String[] cmdffmpeg,Integer updateId,String pathToFileCloud,String pathToUploud,Integer state_id) {
 		this.mainWindow = mainWindow;
 		this.cmdffmpeg = cmdffmpeg;
 		this.updateId = updateId;
 		this.pathToFileCloud = pathToFileCloud;
 		this.pathToUploud = pathToUploud;
+		this.state_id = state_id;
 	}
 	
 	public void run(){
 		System.out.println("Поток запущен...");
-		
+		MainDecoder launchYet = new MainDecoder();
 		ProcessBuilder processBuilder = new ProcessBuilder();
 		processBuilder.command(cmdffmpeg);
 		try {
@@ -104,28 +108,34 @@ public class FFmpegDecoder extends Thread {
 			 
 			 
 			 String pathToCloud = FFmpegDecoder.this.pathToFileCloud;
-			// System.out.println(pathToCloud);
+			 System.out.println(pathToCloud);
 			 String pathToUploud = FFmpegDecoder.this.pathToUploud;
 			// System.out.println(pathToUploud);
-			 System.out.println(ConstantsUtils.BUCKET_NAME+"pathToCloud"+pathToCloud+"pathToUploud"+pathToUploud);
 			 try {
 			 
-			    BasicAWSCredentials awsCreds = new BasicAWSCredentials(accessKey, secretKey);
+			     BasicAWSCredentials awsCreds = new BasicAWSCredentials(accessKey, secretKey);
 				
-				AmazonS3 s3Client = AmazonS3ClientBuilder
-						.standard()
-					    .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
-					    .withEndpointConfiguration(
+			     AmazonS3 s3Client = AmazonS3ClientBuilder
+					.standard()
+					.withCredentials(new AWSStaticCredentialsProvider(awsCreds))
+					.withEndpointConfiguration(
 					        new AmazonS3ClientBuilder.EndpointConfiguration(
-					        		"s3.selcdn.ru",region
+					        		cloud,region
 					        )
 					    )
 					    .build();
-				File file = new File(pathToUploud);
+			     File file = new File(pathToUploud);
 				s3Client.putObject(new PutObjectRequest(ConstantsUtils.BUCKET_NAME, pathToCloud,file));
 				 if(file.delete()){
 			            System.out.println(pathToUploud+" файл удален");
-			        }else {System.out.println(pathToUploud+" файл не обнаружен");}
+			            String text = pathToUploud+" файл удален";
+			   		    launchYet.log(text.toString());
+		//Here you can add code to remove high-resolution videos downloaded from smartphones, for example, to save space on the cloud.			 
+					 
+			        }else {System.out.println(pathToUploud+" файл не обнаружен");
+			            String text = pathToUploud+" файл не обнаружен";
+					    launchYet.log(text.toString());
+			        }
 				
 			  } catch (Exception e) {
 		            e.printStackTrace();
@@ -133,10 +143,18 @@ public class FFmpegDecoder extends Thread {
 			 
 			 PreparedStatement st;
 		     @SuppressWarnings("unused")
-			Integer result;
+			 Integer result;
 		     Integer id = FFmpegDecoder.this.updateId;
-		     String query = "Update medias set state_id = 1  WHERE id ="+id+" ";
-		     
+		     Integer state_id = FFmpegDecoder.this.state_id;
+		     String query2 = null;
+		     if(state_id == 4) {
+		    	         query2 = "Update medias set state_id = 5  WHERE id ="+id+" ";	
+				}
+			 if(state_id == 3) {
+				 query2 = "Update medias set state_id = 4,split = 1  WHERE id ="+id+" ";	
+			 }
+			 
+			String query = query2;
 		     try {
 	             st = ConnectDB.getConnection().prepareStatement(query);
 	             result = st.executeUpdate();
@@ -146,9 +164,7 @@ public class FFmpegDecoder extends Thread {
 	         } catch (Exception e) {
 	            e.printStackTrace();
 	         }
-	//Here you can add code to remove high-resolution videos downloaded from smartphones, for example, to save space on the cloud.	    
-		         
-			 MainDecoder launchYet = new MainDecoder();
+		    
 			 launchYet.mainActions();
 		   
 			
@@ -156,6 +172,8 @@ public class FFmpegDecoder extends Thread {
 			e.printStackTrace();
 		}
 		 System.out.println("Поток закрыть!");
+		 String text = "Поток закрыть!";
+		 launchYet.log(text.toString());
 	}
 
 
