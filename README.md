@@ -109,6 +109,10 @@ For the backend, you can use the same Amazon S3, what's in the pom file.
 
 Do not forget to include in the project postgresql-42.2.1.jar.
 
+It is not necessary to use this program on a server if you have a powerful home computer. You can install UBUNTU and compress files.
+
+MAINDECODER checked by me on UBUNTU works.
+
 The program works perfectly without bugs. 
 
 Good luck everyone. 
