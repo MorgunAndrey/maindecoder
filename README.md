@@ -6,7 +6,7 @@ I wrote this program specifically for Google as there were crashes and didn’t 
 
 Very sad. 
 
-With this example, I want to show Google developers and get an idea of organizing decoding of large video files and working with cloud storage.
+With this example, I want to show Google developers and get an idea of organizing decoding of large video files MP4 and working with cloud storage.
 
 Here's what you need to run the program.
 
@@ -91,9 +91,7 @@ sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release
 sudo yum install ffmpeg ffmpeg-devel
 
 
-//  INSTALL JDK 8 AND JRE 8
-
-sudo yum install java-1.8.0-openjdk-devel
+//  INSTALL JDK 8 
 
 sudo yum install java-1.8.0-openjdk
 
@@ -103,7 +101,7 @@ for this you need to add the frontend and backend. if you want to quickly write 
 
 Frontend are very good for this plyr and dropzonejs
 
-https://atuin.ru/blog/media-plejer-plyr-dlya-html5-youtube-i-vimeo/
+https://atuin.ru/blog/media-plejer-plyr-dlya-html5-youtube-i-vimeo/ https://github.com/sampotts/plyr
 
 https://www.dropzonejs.com/
 
