@@ -1,6 +1,6 @@
 # Maindecoder
 
-Hi! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
+Hello! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
 
 I wrote this program specifically for Google as there were crashes and didn’t work for more than an hour due to data storage overflow.
 
