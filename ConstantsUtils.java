@@ -16,6 +16,7 @@ public class ConstantsUtils {
 	public static final String SECRET_KEY = "youSecretKey";
 	public static final String BUCKET_NAME = "uploads/";
 	public static final String REGION = "youRegion";
+	public static final String CLOUD ="youCloud"
 	
 	public static final String PATH_APP_UPLOADS= "/var/www/uploads";
 
