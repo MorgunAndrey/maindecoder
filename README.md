@@ -2,7 +2,10 @@
 
 Hello! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
 
-With this example, I want to show developers and get an idea of organizing decoding of large video files MP4 and working with cloud storage.
+I wrote this program specifically for Google as there were crashes and didn’t work for more than an hour due to data storage overflow.
+Very sad. 
+
+With this example, I want to show Google developers and get an idea of organizing decoding of large video files MP4 and working with cloud storage.
 
 Here's what you need to run the program.
 
