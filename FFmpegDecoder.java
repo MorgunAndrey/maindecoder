@@ -100,8 +100,10 @@ public class FFmpegDecoder extends Thread {
 				final boolean finalChangeTitle = changeTitle;
 				if (finalChangeTitle) {
 					System.out.println(finalTitle);
+					launchYet.log("finalTitle"+finalTitle);
 			     }
 				if (mainWindow.debug) System.out.println(line); 
+				launchYet.log(line.toString());
 			} 
 			
 			 System.out.println("поток ffmpeg закрыт");
