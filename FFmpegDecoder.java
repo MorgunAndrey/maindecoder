@@ -124,9 +124,10 @@ public class FFmpegDecoder extends Thread {
 					        )
 					    )
 					    .build();
-			     File file = new File(pathToUploud);
+			        File file = new File(pathToUploud);
 				s3Client.putObject(new PutObjectRequest(ConstantsUtils.BUCKET_NAME, pathToCloud,file));
-				 if(file.delete()){
+				 if (file.exists()) {
+				        file.delete();
 			            System.out.println(pathToUploud+" файл удален");
 			            String text = pathToUploud+" файл удален";
 			   		    launchYet.log(text.toString());
