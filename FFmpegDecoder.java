@@ -131,12 +131,11 @@ public class FFmpegDecoder extends Thread {
 			            System.out.println(pathToUploud+" файл удален");
 			            String text = pathToUploud+" файл удален";
 			   		    launchYet.log(text.toString());
-		//Here you can add code to remove high-resolution videos downloaded from smartphones, for example, to save space on the cloud.			 
-					 
-			        }else {System.out.println(pathToUploud+" файл не обнаружен");
+				}else {System.out.println(pathToUploud+" файл не обнаружен");
 			            String text = pathToUploud+" файл не обнаружен";
 					    launchYet.log(text.toString());
 			        }
+				 //Here you can add code to remove high-resolution videos downloaded from smartphones, for example, to save space on the cloud.
 				
 			  } catch (Exception e) {
 		            e.printStackTrace();
