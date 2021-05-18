@@ -85,8 +85,6 @@ write a line to run jar file every 10 minutes and create a log file
 
 //  INSTALL FFMPEG
 
-sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-
 sudo yum install ffmpeg ffmpeg-devel
 
 
