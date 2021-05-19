@@ -2,7 +2,7 @@
 
 Hello! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
 
-Awarded an exclusive Microsoft gift for the best question in the field of IT technologies of the future - asked by the American company Microsoft.
+Awarded an exclusive gift by the Microsoft Director at the presentation of SIKLA (MSSQL server) in Moscow for the best question in the field of IT technologies of the future - asked to the American company Microsoft.
 
 I wrote this program specifically for Google as there were crashes and didn’t work for more than an hour due to data storage overflow.
 Very sad. 
