@@ -85,8 +85,13 @@ write a line to run jar file every 10 minutes and create a log file
 
 //  INSTALL FFMPEG
 
+sudo yum install epel-release
+sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
 sudo yum install ffmpeg ffmpeg-devel
-
+ffmpeg -version
+ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+3.4.8 - version works stably with files over 300MB
 
 //  INSTALL JDK 8 
 
