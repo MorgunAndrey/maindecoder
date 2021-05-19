@@ -111,9 +111,9 @@ for this you need to add the frontend and backend. if you want to quickly write 
 
 Frontend are very good for this plyr and dropzonejs
 
-https://atuin.ru/blog/media-plejer-plyr-dlya-html5-youtube-i-vimeo/ https://github.com/sampotts/plyr
+Display video files https://atuin.ru/blog/media-plejer-plyr-dlya-html5-youtube-i-vimeo/ https://github.com/sampotts/plyr
 
-https://www.dropzonejs.com/
+Uploading video files https://www.dropzonejs.com/
 
 For the backend, you can use the same Amazon S3, what's in the pom file.
 
