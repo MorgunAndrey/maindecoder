@@ -105,7 +105,7 @@ built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
 
 sudo yum install java-1.8.0-openjdk
 
-2. The decoder works in single-threaded mode, but can be used in multi-threaded mode on JAVA SPRING,or C#, PHP, Python.
+2. The decoder works in single-threaded mode, but can be used in multi-threaded mode on JAVA SPRING.
 
 for this you need to add the frontend and backend. if you want to quickly write a service like YOUTUBE.
 
