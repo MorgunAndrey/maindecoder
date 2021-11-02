@@ -1,13 +1,10 @@
 # Maindecoder
 
-Hello! I am Russian software engineer. Team Lead. Video about me https://vk.com/wall-73375965_14179
+Hello! I am Russian software engineer. Video about me https://vk.com/wall-73375965_14179
 
-Awarded an exclusive gift by the Microsoft Director at the presentation of SIKLA (MSSQL server) in Moscow for the best question in the field of IT technologies  - asked to the American company Microsoft.
+Awarded an exclusive gift by the Microsoft Director at the presentation of MSSQL server in Moscow for the best question in the field of IT technologies  - asked to the American company Microsoft.
 
-I wrote this program specifically for Google as there were crashes and didn’t work for more than an hour due to data storage overflow.
-Very sad. 
-
-With this example, I want to show Google developers and get an idea of organizing decoding of large video files MP4 and working with cloud storage.
+With this example, I want to show fullstark Java SE developers and get an idea of organizing decoding of large video files MP4 and working with cloud storage.
 
 Here's what you need to run the program.
 
